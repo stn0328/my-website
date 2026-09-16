@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://stn0328.github.io/my-website/sitemap.xml
+Disallow: /
