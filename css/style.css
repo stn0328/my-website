@@ -1,1 +1,243 @@
+/* =========================================
+   RESET
+========================================= */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #000000;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    border-bottom: 3px solid #000000;
+    background: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-inner {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: #000000;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 3px solid #000000;
+    padding: 20px;
+}
+
+.main-nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.main-nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-nav a:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    margin-top: 80px;
+    border-top: 3px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    padding: 60px 0 25px;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-main {
+    display: grid;
+    gap: 40px;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    max-width: 400px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links h2,
+.footer-social h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-cta {
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-cta-link {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* =========================================
+   TABLET / DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 0;
+        border: none;
+    }
+
+    .main-nav a {
+        padding: 0;
+        border: none;
+    }
+
+    .main-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-main {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
