@@ -730,3 +730,115 @@ a {
     }
 
 }
+
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+.case-study-grid {
+    display: grid;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.case-study {
+    border: 4px solid #000000;
+}
+
+.case-study-visual {
+    min-height: 250px;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.case-study-content {
+    padding: 30px;
+}
+
+.case-study-content h3 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.case-study-content > p:not(.project-type) {
+    max-width: 650px;
+}
+
+.case-study-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.case-study-tags span {
+    border: 2px solid #000000;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   WORK LIST
+========================================= */
+
+.work-list {
+    display: grid;
+    gap: 0;
+    margin-top: 50px;
+}
+
+.work-list div {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 22px 0;
+    border-top: 2px solid #ffffff;
+}
+
+.work-list div:last-child {
+    border-bottom: 2px solid #ffffff;
+}
+
+.work-list span {
+    font-weight: 900;
+}
+
+.work-list p {
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   PROJECTS DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .case-study-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .case-study:nth-child(even) {
+        margin-top: 100px;
+    }
+
+    .case-study-visual {
+        min-height: 300px;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+    }
+
+}
