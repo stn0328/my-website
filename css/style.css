@@ -640,3 +640,93 @@ a {
     }
 
 }
+
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.service-list {
+    margin-top: 50px;
+}
+
+.service-detail {
+    display: grid;
+    gap: 30px;
+    padding: 45px 0;
+    border-top: 3px solid #ffffff;
+}
+
+.service-detail:last-child {
+    border-bottom: 3px solid #ffffff;
+}
+
+.service-detail-number {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.service-detail h3 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.service-detail p {
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+.service-detail ul {
+    display: grid;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+.service-detail li {
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.process-grid article {
+    border-top: 4px solid #000000;
+    padding-top: 20px;
+}
+
+.process-grid span {
+    font-weight: 900;
+}
+
+.process-grid h3 {
+    font-size: 2rem;
+    margin: 25px 0 10px;
+}
+
+
+/* =========================================
+   SERVICES DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .service-detail {
+        grid-template-columns: 100px 1fr;
+        gap: 60px;
+        padding: 60px 0;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+
+}
