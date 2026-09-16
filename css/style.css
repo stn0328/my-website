@@ -514,3 +514,129 @@ a {
     }
 
 }
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-intro {
+    display: grid;
+    gap: 50px;
+}
+
+.about-copy {
+    max-width: 750px;
+}
+
+.about-copy p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.about-copy p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   EXPERTISE
+========================================= */
+
+.expertise-grid {
+    display: grid;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.expertise-card {
+    border: 3px solid #ffffff;
+    padding: 30px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.expertise-card span {
+    font-weight: 900;
+}
+
+.expertise-card h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.expertise-card p {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   APPROACH
+========================================= */
+
+.about-approach {
+    border-bottom: 12px solid #000000;
+}
+
+.approach-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.approach-grid article {
+    border-top: 4px solid #000000;
+    padding-top: 20px;
+}
+
+.approach-grid span {
+    font-weight: 900;
+}
+
+.approach-grid h3 {
+    font-size: 1.8rem;
+    margin: 25px 0 10px;
+}
+
+
+/* =========================================
+   TOOLS
+========================================= */
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.tools-list span {
+    border: 2px solid #ffffff;
+    padding: 12px 16px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   ABOUT DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .about-intro {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 80px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+}
