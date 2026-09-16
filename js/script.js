@@ -14,8 +14,28 @@ async function loadComponent(id, file) {
     element.innerHTML = await response.text();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    loadHead();
-    loadComponent("site-header", "components/header.html");
-    loadComponent("site-footer", "components/footer.html");
+function setupMobileMenu() {
+    const button = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-nav");
+
+    if (!button || !navigation) return;
+
+    button.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("active");
+
+        button.setAttribute("aria-expanded", isOpen);
+        button.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
+    });
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadHead();
+
+    await loadComponent("site-header", "components/header.html");
+    await loadComponent("site-footer", "components/footer.html");
+
+    setupMobileMenu();
 });
