@@ -45,7 +45,7 @@ a {
 ========================================= */
 
 .site-header {
-    border-bottom: 3px solid #000000;
+    border-bottom: 4px solid #000000;
     background: #ffffff;
     position: relative;
     z-index: 1000;
@@ -61,13 +61,13 @@ a {
 .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-weight: 900;
 }
 
 
 /* =========================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ========================================= */
 
 .menu-toggle {
@@ -101,21 +101,20 @@ a {
     left: 0;
     width: 100%;
     background: #ffffff;
-    border-bottom: 3px solid #000000;
+    border-bottom: 4px solid #000000;
     padding: 20px;
 }
 
 .main-nav.active {
     display: flex;
     flex-direction: column;
-    gap: 0;
 }
 
 .main-nav a {
     padding: 14px 0;
     border-bottom: 1px solid #000000;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .main-nav a:last-child {
@@ -124,12 +123,278 @@ a {
 
 
 /* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-dark {
+    background: #000000;
+    color: #ffffff;
+}
+
+.section-dark a {
+    color: #ffffff;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+    border-bottom: 12px solid #000000;
+}
+
+.hero h1 {
+    max-width: 1000px;
+    font-size: clamp(3.2rem, 10vw, 7.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin-bottom: 35px;
+}
+
+.hero-description {
+    max-width: 700px;
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 3px solid #000000;
+    text-decoration: none;
+    font-weight: 900;
+    transition: 0.2s ease;
+}
+
+.button-primary {
+    background: #000000;
+    color: #ffffff;
+}
+
+.button-secondary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.button-light {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+}
+
+.button-light:hover {
+    background: #000000;
+    color: #ffffff !important;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-preview {
+    position: relative;
+    border-bottom: 12px solid #000000;
+}
+
+.about-preview::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    margin-top: 60px;
+}
+
+.section h2 {
+    max-width: 900px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 30px;
+}
+
+.section > .container > p:not(.eyebrow) {
+    max-width: 750px;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   TEXT LINKS
+========================================= */
+
+.text-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-preview {
+    border-bottom: 12px solid #ffffff;
+}
+
+.card-grid {
+    display: grid;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+.service-card {
+    min-height: 300px;
+    border: 3px solid #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-number {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects-preview {
+    border-bottom: 12px solid #000000;
+}
+
+.project-grid {
+    display: grid;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.project-card {
+    border: 4px solid #000000;
+    background: #ffffff;
+}
+
+.project-placeholder {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-type {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+}
+
+.project-content a {
+    font-weight: 900;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+    position: relative;
+}
+
+.cta-section::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    margin-bottom: 50px;
+}
+
+.cta-section h2 {
+    max-width: 800px;
+}
+
+.cta-section p:not(.eyebrow) {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
    FOOTER
 ========================================= */
 
 .site-footer {
-    margin-top: 80px;
-    border-top: 3px solid #000000;
+    margin-top: 0;
+    border-top: 4px solid #ffffff;
     background: #000000;
     color: #ffffff;
     padding: 60px 0 25px;
@@ -148,7 +413,7 @@ a {
 .footer-logo {
     display: inline-block;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 15px;
 }
 
@@ -185,7 +450,7 @@ a {
     display: inline-block;
     padding: 12px 20px;
     border: 2px solid #ffffff;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .footer-bottom {
@@ -202,7 +467,7 @@ a {
 
 
 /* =========================================
-   TABLET / DESKTOP
+   DESKTOP
 ========================================= */
 
 @media (min-width: 768px) {
@@ -230,6 +495,14 @@ a {
         text-decoration: underline;
     }
 
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .footer-main {
         grid-template-columns: 2fr 1fr 1fr;
     }
@@ -238,223 +511,6 @@ a {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-
-}
-
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
-
-.section {
-    padding: 90px 0;
-}
-
-.section-dark {
-    background: #000000;
-    color: #ffffff;
-}
-
-.section-dark a {
-    color: #ffffff;
-}
-
-.eyebrow {
-    font-size: 0.85rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 15px;
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    padding: 80px 0;
-}
-
-.hero h1 {
-    max-width: 900px;
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-    margin-bottom: 30px;
-}
-
-.hero-description {
-    max-width: 700px;
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-.button {
-    display: inline-block;
-    padding: 14px 22px;
-    border: 3px solid #000000;
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.button-primary {
-    background: #000000;
-    color: #ffffff;
-}
-
-.button-secondary {
-    background: #ffffff;
-    color: #000000;
-}
-
-.button:hover {
-    background: #ffffff;
-    color: #000000;
-}
-
-.button-light {
-    background: #ffffff;
-    color: #000000 !important;
-    border-color: #ffffff;
-}
-
-.button-light:hover {
-    background: #000000;
-    color: #ffffff !important;
-}
-
-
-/* =========================================
-   SECTION HEADINGS
-========================================= */
-
-.section h2 {
-    max-width: 850px;
-    font-size: clamp(2.2rem, 5vw, 4.5rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    margin-bottom: 30px;
-}
-
-.section > .container > p:not(.eyebrow) {
-    max-width: 750px;
-    font-size: 1.1rem;
-}
-
-
-/* =========================================
-   TEXT LINKS
-========================================= */
-
-.text-link {
-    display: inline-block;
-    margin-top: 25px;
-    font-weight: 800;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
-
-
-/* =========================================
-   SERVICE CARDS
-========================================= */
-
-.card-grid {
-    display: grid;
-    gap: 15px;
-    margin: 50px 0;
-}
-
-.service-card {
-    border: 2px solid #ffffff;
-    padding: 30px;
-}
-
-.card-number {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 800;
-    margin-bottom: 50px;
-}
-
-.service-card h3 {
-    font-size: 1.7rem;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #ffffff;
-}
-
-
-/* =========================================
-   PROJECTS
-========================================= */
-
-.project-grid {
-    display: grid;
-    gap: 30px;
-    margin: 50px 0;
-}
-
-.project-card {
-    border: 3px solid #000000;
-}
-
-.project-card img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 25px;
-}
-
-.project-type {
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.project-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.project-content a {
-    font-weight: 800;
-}
-
-
-/* =========================================
-   DESKTOP
-========================================= */
-
-@media (min-width: 768px) {
-
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
 }
