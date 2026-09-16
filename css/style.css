@@ -842,3 +842,91 @@ a {
     }
 
 }
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-grid {
+    display: grid;
+    gap: 60px;
+}
+
+.contact-grid > div:first-child p:not(.eyebrow) {
+    max-width: 650px;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    border-top: 4px solid #000000;
+}
+
+.contact-item {
+    padding: 25px 0;
+    border-bottom: 2px solid #000000;
+}
+
+.contact-item span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contact-item a {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.contact-services {
+    display: grid;
+    gap: 0;
+    margin-top: 50px;
+}
+
+.contact-services div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 22px 0;
+    border-top: 2px solid #ffffff;
+}
+
+.contact-services div:last-child {
+    border-bottom: 2px solid #ffffff;
+}
+
+.contact-services span {
+    font-weight: 900;
+}
+
+.contact-services p {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.contact-final {
+    border-bottom: 12px solid #000000;
+}
+
+
+/* =========================================
+   CONTACT DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: start;
+    }
+
+    .contact-services {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+    }
+
+}
