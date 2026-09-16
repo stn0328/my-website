@@ -930,3 +930,36 @@ a {
     }
 
 }
+/* =========================================
+   404 PAGE
+========================================= */
+
+.error-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    border-bottom: 12px solid #000000;
+}
+
+.error-code {
+    font-size: clamp(6rem, 25vw, 16rem);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    margin-bottom: 50px;
+}
+
+.error-page h1 {
+    max-width: 800px;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 25px;
+}
+
+.error-description {
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
