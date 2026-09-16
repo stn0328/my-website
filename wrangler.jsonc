@@ -1,0 +1,11 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "my-website",
+    "compatibility_date": "2026-09-16",
+
+    "assets": {
+        "directory": ".",
+        "html_handling": "drop-trailing-slash",
+        "not_found_handling": "404-page"
+    }
+}
